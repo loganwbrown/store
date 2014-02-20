@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>KellisDeals</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <td><%= link_to 'Vehicle', vehicles_path %></td><br>
+  <td><%= link_to 'Sales', sales_path %></td><br>
+  <td><%= link_to 'Advertising', advertisings_path %></td><br>
+
+<%= yield %>
+
+</body>
+</html>

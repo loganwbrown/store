@@ -1,0 +1,30 @@
+<h1>Listing advertisings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Size</th>
+      <th>Imgurl</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @advertisings.each do |advertising| %>
+      <tr>
+        <td><%= advertising.size %></td>
+        <td><%= advertising.imgurl %></td>
+        <td><%= image_tag(advertising.imgurl) %></td>
+        <td><%= link_to 'Show', advertising %></td>
+        <td><%= link_to 'Edit', edit_advertising_path(advertising) %></td>
+        <td><%= link_to 'Destroy', advertising, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Advertising', new_advertising_path %>
